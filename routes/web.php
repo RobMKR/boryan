@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MainController@index');
+Route::get('/about', 'MainController@about');
+Route::get('/services', 'MainController@services');
+Route::get('/services/repair', 'MainController@repair');
+Route::get('/services/installation', 'MainController@install');
+Route::get('/services/setup', 'MainController@setup');
+Route::get('/contact', 'MainController@contact');
+Route::get('/blog', 'MainController@blog');
+Route::post('/contact', 'MainController@contactPost');
+Route::post('/subscribe', 'MainController@subscribe');
